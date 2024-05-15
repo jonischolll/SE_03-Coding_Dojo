@@ -38,52 +38,56 @@ while game_win == 0:
         grid[row][column] = 1
 
 
+    last_row = row - 1
+    next_row = row + 1
 
+    last_column = column - 1
+    next_column = column + 1
      
     if row > 0:
 
-            if grid[row -1][column] == 1:
+            if grid[last_row][column] == 1:
         
 
-                grid[row -1][column] = 0
+                grid[last_row][column] = 0
 
             else: 
-                grid[row -1][column] = 0
+                grid[last_row][column] = 0
 
 
     
     if row < (grid_size - 1):
 
-            if grid[row +1][column] == 1:
+            if grid[next_row][column] == 1:
         
 
-                grid[row +1][column] = 0
+                grid[next_row][column] = 0
 
             else: 
-                grid[row +1][column] = 0
+                grid[next_row][column] = 0
 
 
 
     if column > 0:
 
-            if grid[row][column -1] == 1:
+            if grid[row][last_column] == 1:
         
 
-                grid[row][column -1] = 0
+                grid[row][last_column] = 0
 
             else: 
-                grid[row][column -1 ] = 0
+                grid[row][last_column] = 0
 
     
     if column < (grid_size - 1):
 
-            if grid[row][column +1] == 1:
+            if grid[row][next_column] == 1:
         
 
-                grid[row][column +1] = 0
+                grid[row][next_column] = 0
 
             else: 
-                grid[row][column +1] = 0
+                grid[row][next_column] = 0
 
 
     
